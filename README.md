@@ -26,7 +26,7 @@ Para cada item do catálogo, serão armazenados os seguintes atributos:
 #### Funcionalidades e Interações:
 
 
-- Adicionar Item: O usuário pode adicionar novos itens ao catálogo, preenchendo um formulário com os atributos acima. O novo item é exibido na listagem e salvo em localStorage.
+- Adicionar Item: O usuário pode adicionar novos itens ao catálogo, preenchendo um formulário com os atributos acima. Para acessar o formulário, um botão deve ser pressionado, e uma modal com o formulário se ativará. Após o cadastro, o novo item é exibido na listagem e salvo em localStorage.
 Marcar Status: Cada item da lista terá uma opção para o usuário marcar como "Tenho" ou "Desejo comprar". Esta ação é persistida no localStorage.
 - Detalhes e Avaliação: O usuário pode ver detalhes de cada item em uma página específica, onde também pode avaliar ou comentar o produto.
 
