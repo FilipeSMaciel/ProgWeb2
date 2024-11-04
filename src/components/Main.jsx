@@ -1,7 +1,13 @@
 export function Main() {
   return (
     <main>
-      <h1>Main</h1>
+      <div className='register__btn'>
+        <h2>Cadastro de Items CircuitHub</h2>
+        <button>Adicionar</button>
+      </div>
+      <div>
+        <p>Placeholder: aqui vai a lista dos items</p>
+      </div>
     </main>
   )
 }
