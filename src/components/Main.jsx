@@ -1,7 +1,9 @@
+import { Card } from './Card'
+
 export function Main() {
   return (
     <main>
-      <h1>Main</h1>
+      <Card />
     </main>
   )
 }

@@ -1,11 +1,13 @@
 import { useForm } from 'react-hook-form'
+import { Estrelas } from './Estrelas'
+import "./Card.css"
 
 export function Card() {
 
     const { register, handleSubmit } = useForm()
 
     return (
-        <div>
+        <div className='card'>
             <img src={item.foto} alt="Foto do Item" />
             <div>
                 <h3>{item.titulo}</h3>
