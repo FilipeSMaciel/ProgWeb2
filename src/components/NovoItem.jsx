@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export function NovoItem({ item, setItem }) {
+export function NovoItem({ itens, setItens }) {
 
     const { register, handleSubmit } = useForm()
 
@@ -15,9 +15,9 @@ export function NovoItem({ item, setItem }) {
             comentario: ""
 
         }
-        const item2 = [novo, ...item]
-        setItem(item2)
-        localStorage.setItem("item", JSON.stringify(item2))
+        const item2 = [novo, ...itens]
+        setItens(item2)
+        localStorage.setItens("item", JSON.stringify(item2))
     }
 
     return (
