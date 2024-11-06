@@ -1,20 +1,48 @@
-// import { Card } from './Card'
-import { ModalForm } from "./ModalForm";
+import Modal from 'react-responsive-modal';
+import { useEffect, useState } from 'react';
+import { Card } from './Card'
+import { NovoItem } from './NovoItem';
 
 export function Main() {
+  
+  const [itens, setItens] = useState([])
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem('itens')) {
+      const storedItens = JSON.parse(localStorage.getItem('itens'))
+      setItens(storedItens)
+    }
+  }, [])
+
+  const listaItens = itens.map(item => (
+    <Card
+      key={item.nome}
+      item={item}
+      itens={itens}
+      setFilmes={setItens}
+    />
+  ))
+
+  function abrirForm(){
+    setOpen(true)
+  }
+
   return (
     <>
       <main>
         <div className='register__btn'>
           <h2>Cadastro de Items CircuitHub</h2>
-          <button>Adicionar</button>
+          <button onClick={abrirForm}>Adicionar</button>
         </div>
 
-        <div>
-          <p>Placeholder: aqui vai a lista dos items</p>
+        <div className='grid-itens'>
+          {listaItens}
         </div>
       </main>
-      <Modal
+      <Modal open={open} onClose={() => setOpen(false)} center>
+        <NovoItem itens={itens} setItens={setItens} />
+      </Modal>
     </>
 
   )

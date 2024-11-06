@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export function NovoItem({ item, setItem }) {
+export function NovoItem({ itens, setItens }) {
 
     const { register, handleSubmit } = useForm()
 
@@ -15,9 +15,9 @@ export function NovoItem({ item, setItem }) {
             comentario: ""
 
         }
-        const item2 = [novo, ...item]
-        setItem(item2)
-        localStorage.setItem("item", JSON.stringify(item2))
+        const item2 = [novo, ...itens]
+        setItens(item2)
+        localStorage.setItens("itens", JSON.stringify(item2))
     }
 
     return (
@@ -33,22 +33,22 @@ export function NovoItem({ item, setItem }) {
 
                 <p>
                     <label htmlFor="categoria">Categoria: </label>
-                    <input type="text" required {...register('categoria')} />
+                    <input type="text" id="categoria" required {...register('categoria')} />
                 </p>
 
                 <p>
                     <label htmlFor="marca">Marca: </label>
-                    <input type="text" required {...register('marca')} />
+                    <input type="text" id="marca" required {...register('marca')} />
                 </p>
 
                 <p>
                     <label htmlFor="preco">Preço: </label>
-                    <input type="number" required {...register('preco')} />
+                    <input type="number" id="preco" required {...register('preco')} />
                 </p>
 
                 <p>
                     <label htmlFor="foto">Foto: </label>
-                    <input type="text" required {...register('foto')} />
+                    <input type="text" id="foto" required {...register('foto')} />
                 </p>
 
                 <p>
