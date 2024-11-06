@@ -14,7 +14,7 @@ export function Main() {
           <p>Placeholder: aqui vai a lista dos items</p>
         </div>
       </main>
-      <ModalForm />
+      <Modal
     </>
 
   )
