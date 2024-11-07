@@ -1,7 +1,8 @@
-import Modal from 'react-responsive-modal';
+import { Modal } from 'react-responsive-modal';
 import { useEffect, useState } from 'react';
 import { Card } from './Card'
 import { NovoItem } from './NovoItem';
+import 'react-responsive-modal/styles.css'
 
 export function Main() {
   

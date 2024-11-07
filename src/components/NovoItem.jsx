@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 
 export function NovoItem({ itens, setItens }) {
-
     const { register, handleSubmit } = useForm()
 
     function incluirItem(data) {
@@ -22,7 +21,7 @@ export function NovoItem({ itens, setItens }) {
 
     return (
         <>
-            <h2>Cadastro de itens</h2>
+            <h2>Cadastro de Itens CircuitHub</h2>
 
             <form onSubmit={handleSubmit(incluirItem)}>
 
