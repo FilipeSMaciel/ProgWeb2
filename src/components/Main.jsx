@@ -21,7 +21,7 @@ export function Main() {
       key={item.nome}
       item={item}
       itens={itens}
-      setFilmes={setItens}
+      setItens={setItens}
     />
   ))
 

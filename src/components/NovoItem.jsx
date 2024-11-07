@@ -14,9 +14,9 @@ export function NovoItem({ itens, setItens }) {
             comentario: ""
 
         }
-        const item2 = [novo, ...itens]
-        setItens(item2)
-        localStorage.setItens("itens", JSON.stringify(item2))
+        const arrayItens = [novo, ...itens]
+        setItens(arrayItens)
+        localStorage.setItem("itens", JSON.stringify(arrayItens))
     }
 
     return (
