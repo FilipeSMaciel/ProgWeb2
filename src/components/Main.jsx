@@ -7,7 +7,7 @@ import '../style.css';
 
 
 export function Main() {
-  
+
   const [itens, setItens] = useState([])
   const [open, setOpen] = useState(false)
 
@@ -27,26 +27,23 @@ export function Main() {
     />
   ))
 
-  function abrirForm(){
+  function abrirForm() {
     setOpen(true)
   }
 
   return (
-    <>
-      <main>
-        <div className='register__btn'>
-          <h2>Cadastro de Items CircuitHub</h2>
-          <button onClick={abrirForm}>Adicionar</button>
-        </div>
+    <main className='flex flex-col min-h-screen'>
+      <div className='register__btn'>
+        <h2>Cadastro de Items CircuitHub</h2>
+        <button onClick={abrirForm}>Adicionar</button>
+      </div>
 
-        <div className='grid-itens'>
-          {listaItens}
-        </div>
-      </main>
+      <div className='grid-itens'>
+        {listaItens}
+      </div>
       <Modal open={open} onClose={() => setOpen(false)} center>
         <NovoItem itens={itens} setItens={setItens} />
       </Modal>
-    </>
-
+    </main>
   )
 }

@@ -1,0 +1,37 @@
+[
+	{
+		"produto": "Notebook Lenovo IdeaPad 3",
+		"categoria": "Eletrônico",
+		"marca": "Lenovo",
+		"preco": 2500,
+		"foto": "https://m.media-amazon.com/images/I/61HQNiJlH7L.__AC_SX300_SY300_QL70_ML2_.jpg"
+	},
+	{
+		"produto": "Smartphone Samsung Galaxy S22",
+		"categoria": "Eletrônico",
+		"marca": "Samsung",
+		"preco": 4000,
+		"foto": "https://images.samsung.com/is/image/samsung/p6pim/br/2202/gallery/br-galaxy-s22-s901-sm-s901ezwjzto-530801791?$684_547_JPG$"
+	},
+	{
+		"produto": "Fone de Ouvido JBL Tune 500BT",
+		"categoria": "Acessório Eletrônico",
+		"marca": "JBL",
+		"preco": 350,
+		"foto": "https://m.media-amazon.com/images/I/51dQZRvwajL.__AC_SX300_SY300_QL70_ML2_.jpg"
+	},
+	{
+		"produto": "TV LED LG Smart TV 43\"",
+		"categoria": "Eletrônico",
+		"marca": "LG",
+		"preco": 1800,
+		"foto": "https://m.media-amazon.com/images/I/61hyXt3P+AL._AC_SY300_SX300_.jpg"
+	},
+	{
+		"produto": "Tablet Apple iPad Air",
+		"categoria": "Eletrônico",
+		"marca": "Apple",
+		"preco": 4500,
+		"foto": "https://m.media-amazon.com/images/I/41TowFSWLrL._AC_SL1000_.jpg"
+	}
+]

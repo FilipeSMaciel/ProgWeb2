@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
+import Pesquisa from './pages/Pesquisa.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/pesquisa',
-    element: <App />
+    element: <Pesquisa />
   }
 ]);
 
