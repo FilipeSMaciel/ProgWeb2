@@ -26,7 +26,7 @@ export function NovoItem({ itens, setItens }) {
             <form onSubmit={handleSubmit(incluirItem)}>
 
                 <p>
-                    <label htmlFor="nome">Produto: </label>
+                    <label className="" htmlFor="nome">Produto: </label>
                     <input type="text" name="" id="nome" required {...register('nome')} />
                 </p>
 
