@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Card } from './Card'
 import { NovoItem } from './NovoItem';
 import 'react-responsive-modal/styles.css'
+import '../style.css';
+
 
 export function Main() {
   

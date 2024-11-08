@@ -1,4 +1,6 @@
 import { Estrelas } from './Estrelas'
+import '../style.css';
+
 
 export function Card({ item, itens, setItens }) {
 

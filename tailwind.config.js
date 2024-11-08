@@ -5,7 +5,24 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'header-fundo': '#333658',
+        'texto_branco': '#ffffff',
+        'verde_principal': '#017c6a',
+      },
+    },
+    fontFamily: {
+      sans: [
+        '"Inter var", sans-serif',
+        {
+          fontFeatureSettings: '"cv11", "ss01"',
+          fontVariationSettings: '"opsz" 32'
+        },
+      ],
+    },
   },
+  
+  
   plugins: [],
 }

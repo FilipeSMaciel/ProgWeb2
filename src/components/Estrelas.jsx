@@ -1,4 +1,6 @@
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import '../style.css';
+
 
 export function Estrelas({ num }) {
 	const icones = []

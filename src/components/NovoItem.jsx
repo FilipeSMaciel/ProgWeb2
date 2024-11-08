@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import '../style.css';
+
 
 export function NovoItem({ itens, setItens }) {
     const { register, handleSubmit } = useForm()
