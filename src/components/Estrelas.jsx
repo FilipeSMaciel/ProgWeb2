@@ -14,7 +14,7 @@ export function Estrelas({ num }) {
   }
 
   return (
-    <div className="estrelas">
+    <div className="flex ml-4 gap-3 text-[1.5rem] text-amber-400 mt-3">
       {icones}
     </div>
   );

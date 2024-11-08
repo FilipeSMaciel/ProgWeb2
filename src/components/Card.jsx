@@ -23,10 +23,10 @@ export function Card({ item, itens, setItens }) {
     setComentario(temItem ? 'Já possuo' : 'Não possuo');
     setIsPossui(temItem);
 
-		if (!temItem) {
-			setNota(0);
-			setNotaSelecionada(null);
-	}
+    if (!temItem) {
+      setNota(0);
+      setNotaSelecionada(null);
+    }
   }
 
   function handleNota(novaNota) {
@@ -58,15 +58,20 @@ export function Card({ item, itens, setItens }) {
   }
 
   return (
-    <div className="card">
-      <img src={item.foto} alt="Foto do Item" />
+    <div className="w-[20rem] bg-fundo_card p-10 rounded-[0.3rem]">
+      <img className='w-[25rem]' src={item.foto} alt="Foto do Item" />
       <div>
-        <h3>{item.nome}</h3>
-        <p className="categoria">{item.categoria}</p>
-        <p className="marca">{item.marca}</p>
-        <p className="preco">
-          {item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-        </p>
+        <div className='flex flex-col gap-1'>
+
+          <h3 className='text-center mt-4 font-roboto text-[0.9rem] font-bold capitalize'>{item.nome}</h3>
+          <div className=' flex flex-col gap-1 py-3 ml-[1rem] font-semibold'>
+            <p className="font-roboto text-[0.8rem]">{item.categoria}</p>
+            <p className="font-roboto text-[0.8rem]">{item.marca}</p>
+            <p className="font-roboto text-[0.8rem]">
+              {item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+            </p>
+          </div>
+        </div>
 
         <p>
           {avaliado ? (
@@ -76,9 +81,7 @@ export function Card({ item, itens, setItens }) {
               <button onClick={avaliarItem}>Reavaliar</button>
             </>
           ) : (
-            <>
-              <button onClick={avaliarItem}>Avaliar</button>
-            </>
+              <button className='bg-verde_principal text-[0.8rem] px-10 text-white font-bold font-roboto rounded-[0.5rem] uppercase p-2 border-solid border-[0.1rem] ' onClick={avaliarItem}>Avaliar</button>
           )}
         </p>
       </div>
@@ -107,7 +110,7 @@ export function Card({ item, itens, setItens }) {
             {isPossui && (
               <>
                 <p>Escolha sua nota:</p>
-                <div className="nota-buttons">
+                <div className="flex gap-1">
                   {[1, 2, 3, 4, 5].map((value) => (
                     <button
                       key={value}
@@ -124,9 +127,11 @@ export function Card({ item, itens, setItens }) {
               </>
             )}
 
-            <button onClick={confirmarAvaliacao} disabled={notaSelecionada === null && isPossui}>
-              Confirmar Avaliação
-            </button>
+            <div className='flex justify-center mt-4'>
+              <button className='bg-verde_principal font-roboto text-white text-[0.8rem] uppercase p-2' onClick={confirmarAvaliacao} disabled={notaSelecionada === null && isPossui}>
+                Confirmar Avaliação
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -7,9 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'header-fundo': '#CECEC8',
+        'header-fundo': '#242424',
         'texto_branco': '#ffffff',
         'verde_principal': '#017c6a',
+        'fundo_card': '#C4C3C2',
+        'bg_principal': '#017c6a',
+        'adicionar_btn': '#61bef1',
+        'adicionar_secBg': '#2f2f35',
       },
     },
     fontFamily: {
