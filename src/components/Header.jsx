@@ -10,10 +10,10 @@ export function Header() {
         </div>
         <div className="flex gap-10">
           <p>
-            <Link to='/' className="text-verde_principal font-bold font-sans">Cadastro</Link>
+            <Link to='/' className="bg-verde_principal text-white font-bold font-sans  rounded-[0.5rem] p-2 border-solid border-[0.1rem] border-black">Cadastro</Link>
           </p>
           <p>
-            <Link to='/pesquisa' className="links">Pesquisa</Link>
+            <Link to='/pesquisa' className="font-bold font-sans rounded-[0.5rem] p-2 border-solid border-[0.01rem] border-black">Pesquisa</Link>
           </p>
         </div>
       </section>

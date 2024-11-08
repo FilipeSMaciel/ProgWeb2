@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'header-fundo': '#333658',
+        'header-fundo': '#CECEC8',
         'texto_branco': '#ffffff',
         'verde_principal': '#017c6a',
       },
