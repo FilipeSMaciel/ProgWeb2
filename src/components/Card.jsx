@@ -1,5 +1,4 @@
 import { Estrelas } from './Estrelas'
-import "./Card.css"
 
 export function Card({ item, itens, setItens }) {
 
