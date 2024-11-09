@@ -32,13 +32,13 @@ export function Main() {
   }
 
   return (
-    <main className='flex flex-col min-h-screen font-roboto'>
+    <main className='flex flex-col max-h-screen font-roboto'>
       <div className='flex justify-around p-16 text-[1.5rem] mt-[-0.1rem]  bg-adicionar_secBg'>
         <h2 className='text-[2rem] text-adicionar_btn'>Cadastro de Reviews</h2>
         <button className='text-adicionar_btn border-adicionar_btn border-solid border-[0.03rem] p-2 rounded-[0.8rem]' onClick={abrirForm}>Adicionar</button>
       </div>
 
-      <div className='flex justify-center gap-8 bg-header-fundo p-20'>
+      <div className='flex justify-center gap-8 bg-adicionar_secBg p-20'>
         {listaItens}
       </div>
       <Modal open={open} onClose={() => setOpen(false)} center>

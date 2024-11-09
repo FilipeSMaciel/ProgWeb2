@@ -36,7 +36,7 @@ export default function Pesquisa() {
   return (
     <>
       <Header />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col h-[85vh]">
         <h1>Pesquisa CircuitHub</h1>
         <form onSubmit={handleSubmit(pesquisaItem)}>
           <input type="text"
