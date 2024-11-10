@@ -5,7 +5,6 @@ import { NovoItem } from './NovoItem';
 import 'react-responsive-modal/styles.css'
 import '../style.css';
 
-
 export function Main() {
 
   const [itens, setItens] = useState([])
@@ -31,8 +30,6 @@ export function Main() {
     setOpen(true)
   }
 
-
-
   return (
     <main className=' font-roboto  bg-header-fundo '>
 
@@ -41,7 +38,7 @@ export function Main() {
         <h2 className='text-[3rem] capitalize text-neutral-300'>Como funciona</h2>
 
         <div className='flex  gap-[2rem] items-center'>
-          <div className='flex flex-col justify-center items-center gap-3 bg-neutral-700 p-20 rounded-[20rem] w-[25rem] h-[25rem]   hover:border-white hover:border-2 hover:scale-105 hover:bg-verde_principal transition-transform duration-300 ease-in-out'>
+          <div className='flex flex-col justify-center items-center gap-3 bg-neutral-700 p-20 rounded-[20rem] w-[25rem] h-[25rem] hover:border-white hover:border-2 hover:scale-105 hover:bg-verde_principal transition-transform duration-300 ease-in-out'>
             <img className='w-[10rem] rounded-[0.4rem]' src="add.png" alt="" />
             <h3 className='text-neutral-200 text-[2rem] text-center'>1</h3>
             <h4 className='text-neutral-300 text-[1.3rem] capitalize text-center'>Cadastro de itens</h4>
