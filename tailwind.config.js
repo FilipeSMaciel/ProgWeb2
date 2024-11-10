@@ -19,6 +19,10 @@ export default {
     fontFamily: {
       roboto: ['Roboto Mono', 'monospace'],
     },
+      backgroundImage: {
+        'cadastrar': "url('./cadastrar.png')",
+        'overlay': "linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.8)) 100%",
+      },
   },
   plugins: [],
 }

@@ -28,51 +28,54 @@ export function NovoItem({ itens, setItens }) {
     localStorage.setItem("itens", JSON.stringify(arrayItens));
   }
 
-  return (
+  return  (
     <>
-      <h2>Cadastro de Itens CircuitHub</h2>
+      <section className='text-black font-r p-16 text-[1.5rem] flex items-center flex-col gap-6'>
 
-      <form onSubmit={handleSubmit(incluirItem)}>
-        <p>
-          <label htmlFor="nome">Produto: </label>
-          <input type="text" id="nome" required {...register('nome')} />
-        </p>
+        <h2>Cadastro de Itens CircuitHub</h2>
 
-        <p>
-          <label htmlFor="categoria">Categoria: </label>
-          <input type="text" id="categoria" required {...register('categoria')} />
-        </p>
+        <form className='flex flex-col gap-[1rem]' onSubmit={handleSubmit(incluirItem)}>
+          <p>
+            <label className='flex text-[1.3rem]' htmlFor="nome">Produto: </label>
+            <input className='border-black border-[0.1rem] h-[5vh] bg-black/15' type="text" id="nome" required {...register('nome')} />
+          </p>
 
-        <p>
-          <label htmlFor="marca">Marca: </label>
-          <input type="text" id="marca" required {...register('marca')} />
-        </p>
+          <p>
+            <label className='flex text-[1.3rem]' htmlFor="categoria">Categoria: </label>
+            <input className='border-black border-[0.1rem] h-[5vh] bg-black/15' type="text" id="categoria" required {...register('categoria')} />
+          </p>
 
-        <p>
-          <label htmlFor="preco">Preço: </label>
-          <input
-            type="text"
-            id="preco"
-            required
-            {...register('preco')}
-            onInput={(e) => {
-              e.target.value = e.target.value.replace(/[^0-9,.]/g, '');
-              // Converte o valor de volta para um formato adequado
-              setValue("preco", e.target.value);
-            }}
-          />
-        </p>
+          <p>
+            <label className='flex text-[1.3rem]' htmlFor="marca">Marca: </label>
+            <input className='border-black border-[0.1rem] h-[5vh] bg-black/15' type="text" id="marca" required {...register('marca')} />
+          </p>
 
-        <p>
-          <label htmlFor="foto">Foto: </label>
-          <input type="text" id="foto" required {...register('foto')} />
-        </p>
+          <p>
+            <label className='flex text-[1.3rem]' htmlFor="preco">Preço: </label>
+            <input className='border-black border-[0.1rem] h-[5vh] bg-black/15'
+              type="text"
+              id="preco"
+              required
+              {...register('preco')}
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/[^0-9,.]/g, '');
+                // Converte o valor de volta para um formato adequado
+                setValue("preco", e.target.value);
+              }}
+            />
+          </p>
 
-        <p>
-          <input type="submit" value="Incluir" />
-          <input type="reset" value="Limpar" />
-        </p>
-      </form>
+          <p>
+            <label className='flex text-[1.3rem]' htmlFor="foto">Foto: </label>
+            <input className='border-black border-[0.1rem] h-[5vh] bg-black/15' type="text" id="foto" required {...register('foto')} />
+          </p>
+
+          <p className='flex justify-evenly gap-2 '>
+            <input className='hover:cursor-pointer border-black border-[0.1rem] p-2 px-8 rounded-[0.3rem] hover:bg-verde_principal/65' type="submit" value="Incluir" />
+            <input className='hover:cursor-pointer border-black border-[0.1rem] p-2 px-8 rounded-[0.3rem] hover:bg-red-600/40' type="reset" value="Limpar" />
+          </p>
+        </form>
+      </section>
     </>
   );
 }

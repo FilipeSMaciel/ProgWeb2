@@ -58,7 +58,7 @@ export function Card({ item, itens, setItens }) {
   }
 
   return (
-    <div className="w-[20rem] bg-fundo_card p-10 rounded-[0.3rem]">
+    <div className="w-[20rem] bg-fundo_card p-10 rounded-[0.3rem] max-h-[50rem]">
       <img className='w-[25rem]' src={item.foto} alt="Foto do Item" />
       <div>
         <div className='flex flex-col gap-1'>
@@ -88,9 +88,9 @@ export function Card({ item, itens, setItens }) {
 
       {isModalOpen && (
         <div className="modal">
-          <div className="modal-content">
+          <div className="flex flex-col gap-2">
             <p>Você já possui este item?</p>
-            <label>
+            <label  className='flex gap-3'>
               <input
                 type="checkbox"
                 checked={isPossui}
@@ -98,7 +98,7 @@ export function Card({ item, itens, setItens }) {
               />
               Já possuo
             </label>
-            <label>
+            <label className='flex gap-3'>
               <input
                 type="checkbox"
                 checked={!isPossui}
@@ -110,7 +110,7 @@ export function Card({ item, itens, setItens }) {
             {isPossui && (
               <>
                 <p>Escolha sua nota:</p>
-                <div className="flex gap-1">
+                <div className="flex justify-evenly text-[1.5rem]">
                   {[1, 2, 3, 4, 5].map((value) => (
                     <button
                       key={value}
@@ -128,7 +128,7 @@ export function Card({ item, itens, setItens }) {
             )}
 
             <div className='flex justify-center mt-4'>
-              <button className='bg-verde_principal font-roboto text-white text-[0.8rem] uppercase p-2' onClick={confirmarAvaliacao} disabled={notaSelecionada === null && isPossui}>
+              <button className='bg-verde_principal font-roboto text-white text-[1rem] uppercase p-4 font-bold rounded-[0.3rem]' onClick={confirmarAvaliacao} disabled={notaSelecionada === null && isPossui}>
                 Confirmar Avaliação
               </button>
             </div>

@@ -6,15 +6,15 @@ export function Header() {
 
   return (
     <header>
-      <section className="flex gap-[50rem] justify-center items-center h-[10vh] bg-header-fundo">
+      <section className={`flex gap-[50rem] justify-center items-center h-[13vh]  ${location.pathname === '/pesquisa' ? 'bg-header-fundo' : ' bg-black/40'}`} >
         <div>
-          <img className="w-[12rem] h-[6rem]" src="Circuit.svg" alt="CircuitHub Logo" />
+          <img className="w-[10vw]  py-4" src="Circuit3.svg" alt="CircuitHub Logo" />
         </div>
         <div className="flex gap-10">
           <p>
             <Link
               to='/'
-              className={`font-bold font-roboto rounded-[0.5rem] text-[0.8rem] uppercase p-2 border-solid border-[0.1rem] ${location.pathname === '/' ? 'bg-verde_principal text-white' : 'border-verde_principal text-verde_principal'}`}
+              className={`font-extrabold font-roboto rounded-[0.3rem] text-[1rem] uppercase px-3 py-2   ${location.pathname === '/' ? ' text-white font-extrabold text-[1.2rem]' : 'text-white font-light'}`}
             >
               Cadastro
             </Link>
@@ -22,7 +22,7 @@ export function Header() {
           <p>
             <Link
               to='/pesquisa'
-              className={`font-bold font-roboto rounded-[0.5rem] text-[0.8rem] p-2 uppercase border-solid border-[0.1rem] ${location.pathname === '/pesquisa' ? 'bg-verde_principal text-white' : 'text-verde_principal border-verde_principal'}`}
+              className={`font-bold font-roboto rounded-[0.3rem] text-[1rem] uppercase px-3 py-2  ${location.pathname === '/pesquisa' ? 'text-white font-extrabold text-[1.2rem]' : 'text-white font-light'}`}
             >
               Pesquisa
             </Link>
@@ -32,12 +32,12 @@ export function Header() {
       {location.pathname === '/pesquisa' ? ''
       :
       <>
-        <video className="absolute inset-0 z-[-4] w-[100vw]" autoPlay loop muted playsInline>
-          <source src="1108.mp4" type="video/mp4" />
+        <video className="absolute inset-y-0 z-[-4] w-[100vw] " autoPlay loop muted playsInline>
+          <source  src="1108.mp4" type="video/mp4" />
         </video>
-        <section className="flex justify-center flex-col items-center font-roboto mt-52 mb-[40vh] bg-gray-900 p-8">
-          <h1 className=" text-[10rem] text-white">CircuitHub</h1>
-          <h2 className="text-[2rem] text-neutral-300">Seu Hub de Hardware e Gadjets</h2>
+        <section className="flex justify-center flex-col items-center font-roboto mt-[13vh]   p-8">
+          <h1 className=" text-[10rem] text-white font-bold">CircuitHub</h1>
+          <h2 className="text-[2rem] text-neutral-300 ">Seu Hub de Hardware e Gadjets</h2>
         </section>
       </>
       }
