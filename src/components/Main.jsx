@@ -68,7 +68,7 @@ export function Main() {
         <button className='text-white bg-black/40 border-[0.17rem] h-20 w-56 font-bold border-verde_principal p-2 rounded-[0.8rem] hover:bg-white hover:text-verde_principal hover:border-none' onClick={abrirForm}>Adicionar</button>
       </section>
 
-      <section className='flex justify-center gap-8 bg-adicionar_secBg p-20'>
+      <section className='flex flex-wrap justify-center gap-8 bg-adicionar_secBg p-20'>
         {(!listaItens || listaItens.length === 0) ? (
           <p className='text-white'>Você não tem nada aqui ainda...</p>
         ) : (

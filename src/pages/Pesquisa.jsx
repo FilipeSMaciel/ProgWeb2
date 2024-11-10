@@ -51,7 +51,7 @@ export default function Pesquisa() {
           </form>
         </div>
 
-        <section className='flex justify-center items-center gap-8 bg-adicionar_secBg p-20 min-h-[45vh]'>
+        <section className='flex flex-wrap justify-center items-center gap-8 bg-adicionar_secBg p-20 min-h-[45vh]'>
           {(!listaItens || listaItens.length === 0) ? (
             <p className='text-white'>Nada pesquisado ainda...</p>
           ) : (
