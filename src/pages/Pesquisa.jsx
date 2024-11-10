@@ -34,9 +34,9 @@ export default function Pesquisa() {
   ))
 
   return (
-    <div className="flex flex-col  bg-header-fundo h-[100vh]">
+    <div className="flex flex-col bg-header-fundo min-h-[100vh]">
       <Header />
-      <section className="bg-header-fundo">
+      <main className="bg-header-fundo min-h-[65vh]">
         <div className="flex items-center justify-start flex-col h-[35vh] bg-[url('./pesquisaa.svg')] bg-cover bg-center">
 
           <h1 className="mt-5 text-white font-bold upp text-[4rem]">Pesquisa Circuit<span className="text-verde_principal">Hub</span></h1>
@@ -50,10 +50,15 @@ export default function Pesquisa() {
 
           </form>
         </div>
-        <div className="flex justify-center items-center p-20 m-auto">
-          <div>{listaItens}</div>
-        </div>
-      </section>
+
+        <section className='flex justify-center items-center gap-8 bg-adicionar_secBg p-20 min-h-[45vh]'>
+          {(!listaItens || listaItens.length === 0) ? (
+            <p className='text-white'>Nada pesquisado ainda...</p>
+          ) : (
+            listaItens
+          )}
+        </section>
+      </main>
       <Footer />
     </div>
   )
