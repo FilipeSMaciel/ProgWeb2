@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Estrelas } from './Estrelas';
+import { Modal } from 'react-responsive-modal';
 import PropTypes from 'prop-types';
 import '../style.css';
 
@@ -77,20 +78,24 @@ export function Card({ item, itens, setItens }) {
           {avaliado ? (
             <>
               <Estrelas num={nota} />
-              <p className="comentario">{comentario}</p>
-              <button onClick={avaliarItem}>Reavaliar</button>
+              <p className='font-roboto flex justify-center mt-5'>{comentario}</p>
+              <div className='flex justify-center mt-5'>
+                <button onClick={avaliarItem} className='bg-verde_principal text-[0.8rem] px-10 text-white font-bold font-roboto rounded-[0.5rem] uppercase p-2 border-solid border-[0.1rem]'>Reavaliar</button>
+              </div>
             </>
           ) : (
-              <button className='bg-verde_principal text-[0.8rem] px-10 text-white font-bold font-roboto rounded-[0.5rem] uppercase p-2 border-solid border-[0.1rem] ' onClick={avaliarItem}>Avaliar</button>
+            <div className='flex justify-center mt-5'>
+              <button className='bg-verde_principal text-[0.8rem] px-10 text-white font-bold font-roboto rounded-[0.5rem] uppercase p-2 border-solid border-[0.1rem]' onClick={avaliarItem}>Avaliar</button>
+            </div>
           )}
         </p>
       </div>
 
       {isModalOpen && (
-        <div className="modal">
+        <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} center>
           <div className="flex flex-col gap-2">
             <p>Você já possui este item?</p>
-            <label  className='flex gap-3'>
+            <label className="flex gap-3">
               <input
                 type="checkbox"
                 checked={isPossui}
@@ -98,7 +103,7 @@ export function Card({ item, itens, setItens }) {
               />
               Já possuo
             </label>
-            <label className='flex gap-3'>
+            <label className="flex gap-3">
               <input
                 type="checkbox"
                 checked={!isPossui}
@@ -115,7 +120,6 @@ export function Card({ item, itens, setItens }) {
                     <button
                       key={value}
                       onClick={() => handleNota(value)}
-                      disabled={!isPossui}
                       style={{
                         backgroundColor: notaSelecionada === value ? 'lightblue' : '',
                       }}
@@ -127,13 +131,17 @@ export function Card({ item, itens, setItens }) {
               </>
             )}
 
-            <div className='flex justify-center mt-4'>
-              <button className='bg-verde_principal font-roboto text-white text-[1rem] uppercase p-4 font-bold rounded-[0.3rem]' onClick={confirmarAvaliacao} disabled={notaSelecionada === null && isPossui}>
+            <div className="flex justify-center mt-4">
+              <button
+                className="bg-verde_principal font-roboto text-white text-[1rem] uppercase p-4 font-bold rounded-[0.3rem]"
+                onClick={confirmarAvaliacao}
+                disabled={notaSelecionada === null && isPossui}
+              >
                 Confirmar Avaliação
               </button>
             </div>
           </div>
-        </div>
+        </Modal>
       )}
     </div>
   );
