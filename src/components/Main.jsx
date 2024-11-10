@@ -34,9 +34,9 @@ export function Main() {
 
 
   return (
-    <main className=' font-roboto  bg-header-fundo mt-[10rem]'>
+    <main className=' font-roboto  bg-header-fundo '>
 
-      <section className='flex flex-col items-center gap-[5rem] p-[10rem] bg-header-fundo bg-gradient-to- to-header-fundo from-black'>
+      <section className='flex flex-col items-center gap-[5rem] p-[10rem] '>
 
         <h2 className='text-[3rem] capitalize text-neutral-300'>Como funciona</h2>
 
@@ -63,7 +63,7 @@ export function Main() {
         </div>
 
       </section>
-      <section className='flex flex-col justify-around items-center bg-center bg-cover p-16 text-[1.5rem] h-[45rem] bg-[url("./cadastrar.png")]' >
+      <section className='flex flex-col justify-around items-center bg-center bg-cover p-16 text-[1.5rem] h-[65vh] bg-[url("./cadastrar.png")]' >
         <h2 className='text-[5rem] text-verde_principal font-extrabold'>Cadastro de Reviews</h2>
         <button className='text-white bg-black/40 border-[0.17rem] h-20 w-56 font-bold border-verde_principal p-2 rounded-[0.8rem] hover:bg-white hover:text-verde_principal hover:border-none' onClick={abrirForm}>Adicionar</button>
       </section>

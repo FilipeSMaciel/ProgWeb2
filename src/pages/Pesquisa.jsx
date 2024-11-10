@@ -34,22 +34,27 @@ export default function Pesquisa() {
   ))
 
   return (
-    <>
+    <div className="flex flex-col  bg-header-fundo h-[100vh]">
       <Header />
-      <div className="flex flex-col h-[85vh] bg-black">
-        <h1>Pesquisa CircuitHub</h1>
-        <form onSubmit={handleSubmit(pesquisaItem)}>
-          <input type="text"
-            required
-            placeholder="Nome ou categoria do item"
-            {...register('palavra')}
-          />
-          <input type="submit" value="Pesquisar" />
+      <section className="bg-header-fundo">
+        <div className="flex items-center justify-start flex-col h-[35vh] bg-[url('./pesquisaa.svg')] bg-cover bg-center">
 
+          <h1 className="mt-5 text-white font-bold upp text-[4rem]">Pesquisa Circuit<span className="text-verde_principal">Hub</span></h1>
+          <form className="flex gap-20  p-20" onSubmit={handleSubmit(pesquisaItem)}>
+            <input className="px-20 rounded-md" type="text"
+              required
+              placeholder="Nome ou categoria"
+              {...register('palavra')}
+            />
+            <input className="p-2 bg-verde_principal rounded-md border-[0.1rem] border-white text-white" type="submit" value="Pesquisar" />
+
+          </form>
+        </div>
+        <div className="flex justify-center items-center p-20 m-auto">
           <div>{listaItens}</div>
-        </form>
-      </div>
+        </div>
+      </section>
       <Footer />
-    </>
+    </div>
   )
 }

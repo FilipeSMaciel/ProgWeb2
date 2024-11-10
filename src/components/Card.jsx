@@ -59,32 +59,34 @@ export function Card({ item, itens, setItens }) {
   }
 
   return (
-    <div className="w-[20rem] bg-fundo_card p-10 rounded-[0.3rem] max-h-[50rem]">
-      <img className='w-[25rem]' src={item.foto} alt="Foto do Item" />
-      <div>
-        <div className='flex flex-col gap-1'>
+    <>
+      <div className='bg-fundo_card w-[20rem] h-[32rem] p-3 flex flex-col justify-between rounded-md drop-shadow-3xl'>
+        <img className='w-[18rem] h-[13rem] rounded-md bg-cover' src={item.foto} alt="Foto do Item" />
+        <div className='p-2 mb-2'>
+            <h3 className='text-[1.2rem] text-center mb-3 mt-[-1rem]'>{item.nome}</h3>
+          <div className=' flex flex-col'>
 
-          <h3 className='text-center mt-4 font-roboto text-[0.9rem] font-bold capitalize'>{item.nome}</h3>
-          <div className=' flex flex-col gap-1 py-3 ml-[1rem] font-semibold'>
-            <p className="font-roboto text-[0.8rem]">{item.categoria}</p>
-            <p className="font-roboto text-[0.8rem]">{item.marca}</p>
-            <p className="font-roboto text-[0.8rem]">
+            <p >{item.categoria}</p>
+            <p >{item.marca}</p>
+            <p >
               {item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
             </p>
           </div>
         </div>
 
-        <p>
+
+
+        <p className='flex flex-col gap-1 items-center'>
           {avaliado ? (
             <>
               <Estrelas num={nota} />
-              <p className='font-roboto flex justify-center mt-5'>{comentario}</p>
-              <div className='flex justify-center mt-5'>
+              <p className='font-roboto flex justify-center text-fundo_card'>{comentario}</p>
+              <div className='flex justify-center'>
                 <button onClick={avaliarItem} className='bg-verde_principal text-[0.8rem] px-10 text-white font-bold font-roboto rounded-[0.5rem] uppercase p-2 border-solid border-[0.1rem]'>Reavaliar</button>
               </div>
             </>
           ) : (
-            <div className='flex justify-center mt-5'>
+            <div className=''>
               <button className='bg-verde_principal text-[0.8rem] px-10 text-white font-bold font-roboto rounded-[0.5rem] uppercase p-2 border-solid border-[0.1rem]' onClick={avaliarItem}>Avaliar</button>
             </div>
           )}
@@ -131,7 +133,7 @@ export function Card({ item, itens, setItens }) {
               </>
             )}
 
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center items-end mt-4">
               <button
                 className="bg-verde_principal font-roboto text-white text-[1rem] uppercase p-4 font-bold rounded-[0.3rem]"
                 onClick={confirmarAvaliacao}
@@ -143,7 +145,7 @@ export function Card({ item, itens, setItens }) {
           </div>
         </Modal>
       )}
-    </div>
+    </>
   );
 }
 

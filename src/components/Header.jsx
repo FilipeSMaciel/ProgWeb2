@@ -5,7 +5,7 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header>
+    <header className={`w-full h-[100vh] ${location.pathname === '/' ? 'bg-[url("Circuit5.png")]' : 'h-[13vh] bg-header-fundo'}`}>
       <section className={`flex gap-[50rem] justify-center items-center h-[13vh]  ${location.pathname === '/pesquisa' ? 'bg-header-fundo' : ' bg-black/40'}`} >
         <div>
           <img className="w-[10vw]  py-4" src="Circuit3.svg" alt="CircuitHub Logo" />
@@ -32,11 +32,9 @@ export function Header() {
       {location.pathname === '/pesquisa' ? ''
       :
       <>
-        <video className="absolute inset-y-0 z-[-4] w-[100vw] " autoPlay loop muted playsInline>
-          <source  src="1108.mp4" type="video/mp4" />
-        </video>
+        
         <section className="flex justify-center flex-col items-center font-roboto mt-[13vh]   p-8">
-          <h1 className=" text-[10rem] text-white font-bold">CircuitHub</h1>
+          <h1 className=" text-[10rem] text-white font-bold">Circuit<span className="text-verde_principal">Hub</span></h1>
           <h2 className="text-[2rem] text-neutral-300 ">Seu Hub de Hardware e Gadjets</h2>
         </section>
       </>
