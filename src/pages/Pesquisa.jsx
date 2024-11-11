@@ -59,13 +59,13 @@ export default function Pesquisa() {
               {...register('palavra')}
             />
             <input
-              className="p-2 bg-verde_principal rounded-md border-[0.1rem] border-white text-white"
+              className="p-2 bg-black/40 hover:bg-verde_principal/60 rounded-md border-[0.1rem] border-white text-white"
               type="submit"
               value="Pesquisar"
             />
             <button
               type="button"
-              className="p-2 bg-red-500 rounded-md border-[0.1rem] border-white text-white"
+              className="p-2 bg-black/40 hover:bg-red-600/40  rounded-md border-[0.1rem] border-white text-white"
               onClick={limparPesquisa}
             >
               Limpar Pesquisa

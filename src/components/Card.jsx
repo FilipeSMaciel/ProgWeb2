@@ -63,7 +63,7 @@ export function Card({ item, itens, setItens }) {
       <div className='bg-fundo_card w-[20rem] h-[32rem] p-3 flex flex-col justify-between rounded-md drop-shadow-3xl'>
         <img className='w-[18rem] h-[13rem] rounded-md bg-cover' src={item.foto} alt="Foto do Item" />
         <div className='p-2 mb-2'>
-            <h3 className='text-[1.2rem] text-center mb-3 mt-[-1rem]'>{item.nome}</h3>
+            <h3 className='text-[1.2rem] w-[15rem] mx-auto text-center mb-3 mt-[-1rem]'>{item.nome}</h3>
           <div className=' flex flex-col'>
 
             <p >{item.categoria}</p>
@@ -135,7 +135,7 @@ export function Card({ item, itens, setItens }) {
 
             <div className="flex justify-center items-end mt-4">
               <button
-                className="bg-verde_principal font-roboto text-white text-[1rem] uppercase p-4 font-bold rounded-[0.3rem]"
+                className="bg-verde_principal font-roboto  text-white text-[1rem] uppercase p-4 font-bold rounded-[0.3rem]"
                 onClick={confirmarAvaliacao}
                 disabled={notaSelecionada === null && isPossui}
               >
